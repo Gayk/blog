@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+    <title> Spring MVC Blog</title>
+</head>
+
+<body>
+
+<header th:replace="layout :: site-header" ></header>
+<main id="posts">
+    <article th:each="post : ${latest3posts}">
+        <h2 class="title" th:text="${post.title}">Post title</h2>
+    </article>
+</main>
+
+<!--<h1>Welcome to Spring MVC</h1>-->
+<!--Now is: <b th:text="${execInfo.now.time}">date and time</b>-->
+
+<footer th:replace="layout :: site-footer" ></footer>
+
+</body>
+
+</html>
